@@ -1,0 +1,61 @@
+:root {
+  --color-brown-100: #8b6e4e;
+  --color-brown-500: #4a3c31;
+  --color-brown-900: #2c1810;
+  --color-cream-100: #f3f4f6;
+  --color-cream-200: #f5f1e9;
+  --color-cream-500: #f5e6d3;
+  --color-blue-100: #71c4ef;
+  --color-blue-300: #00668c;
+  --color-blue-900: #313d44;
+  --color-green-100: #b6cc8d;
+  --color-green-500: #006241;
+  --color-gold-400: #c3a86b;
+
+  --color-brand: var(--color-green-500);
+  --color-on-brand: var(--color-cream-200);
+  --color-figure: var(--color-gold-400);
+
+  --color-accent: var(--color-blue-300);
+  --color-accent-light: var(--color-blue-100);
+  
+  --color-text-strong: var(--color-brown-900);
+  --color-text-body: var(--color-blue-900);
+  --color-text-on-dark: var(--color-cream-500);
+  
+  --color-surface: var(--color-cream-200);
+  --color-surface-hero: var(--color-green-100);
+  --color-surface-warm: var(--color-brown-500);
+
+  --font-body: "kanit", sans-serif;
+  --font-display: "against", serif;
+
+  --text-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.75rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-md: clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
+  --text-lg: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
+  --text-xl: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
+  --text-2xl: clamp(1.25rem, 1.1rem + 1vw, 1.5rem);
+  --text-3xl: clamp(1.5rem, 1.2rem + 1.5vw, 1.875rem);
+  --text-4xl: clamp(1.75rem, 1.4rem + 2vw, 2.25rem);
+  --text-5xl: clamp(2rem, 1.6rem + 2.5vw, 3rem);
+  --text-6xl: clamp(2.5rem, 2rem + 3vw, 4rem);
+  --text-7xl: clamp(3rem, 2.5rem + 3.5vw, 5rem);
+  --text-8xl: clamp(3.5rem, 3rem + 4vw, 6rem);
+  --text-9xl: clamp(4rem, 3.5rem + 4.5vw, 7rem);
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 4px rgb(44 24 16 / 0.05);
+  --shadow-md: 0 8px 16px rgba(5 4 4 / 0.1);
+}

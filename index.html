@@ -4,14 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafeo Rewards · Plataforma de Recompensas</title>
-    <link rel="icon" href="assets/images/CafeoLogo.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <script src="src/app.ts" type="module"></script>
+    <link rel="icon" href="/images/CafeoLogo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <script src="/src/app.ts" type="module"></script>
   </head>
   <body>
-    <div id="app">
-      <h1 class="hero__title">Café Gratis a un toque de distancia</h1>
-      <p>la aplicación se esta iniciando ...</p>
-    </div>
+    <header class="header">
+      <a href="/">
+        <img src="/images/CafeoLogo.svg" alt="Cafeo Rewards" />
+      </a>
+      <nav>
+        <ul class="menu">
+          <li><a href="/">Menu</a></li>
+          <li><a href="rewards.html">Recompensas</a></li>
+          <li><a href="gift-cards.html">Tarjetas Regalos</a></li>
+        </ul>
+      </nav>
+      <div id="actions-buttons" class="header__actions">
+        <a href="stores.html" class="btn__link">Buscar una tienda</a>
+        <a href="login.html" class="btn__link">Iniciar Sesión</a>
+        <a href="join.html" class="btn__cta">Unirse ahora</a>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">Café Gratis a un toque de distancia</h1>
+          <p>Únete ahora para comenzar a ganar Recompensas.</p>
+          <button id="join-now-button" class="hero__button">Únete ahora</button>
+          <small>O inicia sesión en la app para la mejor experiencia</small>
+        </div>
+        <div class="hero__figure"></div>
+      </section>
+      <section class="steps" aria-labelledby="steps-title">
+        <hgroup class="step__header">
+          <h2 id="steps-title">Comenzar es fácil</h2>
+          <p>Gana Estrellas y recibe recompensas en unos sencillos pasos</p>
+        </hgroup>
+        <div class="steps__grid" id="steps-grid"></div>
+      </section>
+      <section class="rewards-bar" aria-labelledby="rewards-title">
+        <h2 id="rewards-title">Obtén tus favoritos gratis</h2>
+        <div class="rewards-bar__track" id="rewards-track"></div>
+      </section>
+      <section class="personalize" aria-labelledby="personalize-title">
+        <div class="personalize__content">
+          <hgroup class="personalize__title">
+            <h2 id="personalize-title">Personaliza tu bebida</h2>
+            <p>
+              Haz tu bebida justo como te gusta con un shot extra de espresso, leche de almendra o
+              un toque de tu sabor favorito
+            </p>
+          </hgroup>
+          <div class="builder">
+            <div class="builder__progress">Paso 1 de 3</div>
+            <div class="builder__stage"></div>
+          </div>
+        </div>
+        <figure class="personalize__figure">
+          <img src="https://placehold.co/180?text=Frio" alt="cafe personalizado" />
+          <img src="https://placehold.co/180?text=Caliente" alt="taza de cafe " />
+        </figure>
+      </section>
+
+      <section class="extras" aria-labelledby="extras-title">
+        <hgroup class="extras__header">
+          <h2 id="extras-title">Extras sin fin</h2>
+          <p class="extra__description">
+            Unirse a Cafeo Rewards significa desbloquear acceso a beneficios exclusivos. Di hola a
+            pedidos fáciles, sabrosas Recompensas y sí, café gratis.
+          </p>
+        </hgroup>
+        <div class="extras__grid" id="extras-grid"></div>
+      </section>
+      <section class="payment" aria-labelledby="payment-title">
+        <hgroup class="payment__header">
+          <h2 id="payment-title">En efectivo o tarjeta, gana Estrellas</h2>
+          <p>
+            No importa cómo pagues, puedes ganar Estrellas con tu café matutino. Esas Estrellas se
+            suman a deliciosas Recompensas
+          </p>
+        </hgroup>
+        <div id="payment-list" class="payment__list"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="links"></section>
+      <section aria-label="Redes sociales y copyright">
+        <div class="social"></div>
+      </section>
+    </footer>
   </body>
 </html>

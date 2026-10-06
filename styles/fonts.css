@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "against";
+  src:
+    url("/fonts/against-Regular.woff2") format("woff2"),
+    url("/fonts/against-Regular.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "kanit";
+  src:
+    url("/fonts/Kanit-Regular.woff2") format("woff2"),
+    url("/fonts/Kanit-Regular.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
