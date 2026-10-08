@@ -1,13 +1,19 @@
-import { defineConfig } from 'vite';
+import Icons from "unplugin-icons/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: '.',
-  publicDir: 'assets',
+  plugins: [
+    Icons({
+      compiler: "raw",
+    }),
+  ],
+  root: ".",
+  publicDir: "assets",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: true,
     rollupOptions: {
-      input: 'index.html',
+      input: "index.html",
     },
   },
   server: {
@@ -15,4 +21,3 @@ export default defineConfig({
     open: true,
   },
 });
-

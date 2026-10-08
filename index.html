@@ -13,18 +13,27 @@
       <a href="/">
         <img src="/images/CafeoLogo.svg" alt="Cafeo Rewards" />
       </a>
-      <nav>
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu de navegación"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      ></button>
+
+      <nav id="main-nav" class="main-nav">
         <ul class="menu">
           <li><a href="/">Menu</a></li>
           <li><a href="rewards.html">Recompensas</a></li>
           <li><a href="gift-cards.html">Tarjetas Regalos</a></li>
         </ul>
+        <div id="actions-buttons" class="header__actions">
+          <a href="stores.html" class="btn__link">Buscar una tienda</a>
+          <a href="login.html" class="btn__link">Iniciar Sesión</a>
+          <a href="join.html" class="btn__cta">Unirse ahora</a>
+        </div>
       </nav>
-      <div id="actions-buttons" class="header__actions">
-        <a href="stores.html" class="btn__link">Buscar una tienda</a>
-        <a href="login.html" class="btn__link">Iniciar Sesión</a>
-        <a href="join.html" class="btn__cta">Unirse ahora</a>
-      </div>
     </header>
     <main>
       <section class="hero">

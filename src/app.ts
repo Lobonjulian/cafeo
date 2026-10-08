@@ -1,5 +1,6 @@
 import { renderExtras } from "./components/Extras";
 import { renderFooter } from "./components/Footer";
+import { renderHeader } from "./Header";
 import { renderPaymentMethods } from "./components/PaymentMethods";
 import { renderRewardsBar } from "./components/RewardsBar";
 import { steps } from "./data/steps";
@@ -28,6 +29,7 @@ function renderSteps(): void {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  renderHeader();
   renderSteps();
   renderRewardsBar();
   renderExtras();
