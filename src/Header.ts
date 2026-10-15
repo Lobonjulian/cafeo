@@ -41,7 +41,7 @@ function initMenuToggle(): void {
   document.addEventListener("click", (event) => {
     if (!isOpen()) return;
 
-    const path = event.composedPath(); 
+    const path = event.composedPath();
 
     if (!path.includes(mainNav) && !path.includes(menuToggle)) {
       setMenuState(false);
