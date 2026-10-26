@@ -1,5 +1,6 @@
 import { cartStore } from "../store/CartStore";
 import type { CartItem } from "../type/Cart";
+import { formatPrice } from "../utils/format";
 
 function renderItem(item: CartItem): string {
   const subtotal = item.product.price * item.quantity;
@@ -20,24 +21,24 @@ function renderItem(item: CartItem): string {
           type="button" 
           class="cart-item__btn" 
           data-action="decrease"
-          aria-label="Disminuir cantidad"
+          aria-label="Disminuir cantidad de ${item.product.name}"
         >−</button>
-        <span class="cart-item__qty">${item.quantity}</span>
+        <span class="cart-item__qty" aria-label="Cantidad: ${item.quantity}">${item.quantity}</span>
         <button 
           type="button" 
           class="cart-item__btn" 
           data-action="increase"
-          aria-label="Aumentar cantidad"
+          aria-label="Aumentar cantidad de ${item.product.name}"
         >+</button>
         <button 
           type="button" 
           class="cart-item__btn cart-item__btn--remove" 
           data-action="remove"
-          aria-label="Eliminar producto"
+          aria-label="Eliminar ${item.product.name}"
         >🗑</button>
       </div>
       <div class="cart-item__subtotal">
-        $${subtotal.toFixed(2)}
+        ${formatPrice(subtotal)}
       </div>
     </li>
   `;
@@ -65,21 +66,19 @@ export function renderCartItems(): void {
   }
 
   totalEl.textContent = `$${total.toFixed(2)}`;
-} 
+}
 
 function attachItemListeners(): void {
   const items = document.querySelectorAll<HTMLElement>(".cart-item");
-  
+
   items.forEach((item) => {
     const productId = item.dataset.productId!;
-    
+
     item.querySelectorAll<HTMLElement>("[data-action]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const action = btn.dataset.action;
-        const current = cartStore
-          .getState()
-          .items.find((i) => i.product.id === productId);
-        
+        const current = cartStore.getState().items.find((i) => i.product.id === productId);
+
         if (!current) return;
 
         if (action === "increase") {

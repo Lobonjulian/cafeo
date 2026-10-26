@@ -4,5 +4,5 @@ export interface Product {
   readonly description: string;
   readonly image: string;
   readonly stars: number;
-  readonly price?: number; 
+  readonly price: number; 
 }

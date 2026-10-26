@@ -70,24 +70,20 @@
               un toque de tu sabor favorito
             </p>
           </hgroup>
-          
+
           <div class="builder">
             <div class="builder__progress">Paso 1 de 3</div>
-            <div class="builder__stage"></div>
+            <div id="builder-feedback" class="builder__feedback" role="status" aria-live="polite"></div>
+
             <div class="builder__actions">
-              <button type="button" class="builder__add" id="add-to-cart-btn">
-                Agregar al carrito
-              </button>
               <button type="button" class="builder__view" id="cart-open-btn" hidden>
                 Ver carrito (<span id="cart-badge">0</span>)
               </button>
             </div>
           </div>
         </div>
-        <figure class="personalize__figure">
-          <img src="https://placehold.co/180?text=Frio" alt="cafe personalizado" />
-          <img src="https://placehold.co/180?text=Caliente" alt="taza de cafe " />
-        </figure>
+
+        <div class="personalize__builder-stage"></div>
       </section>
 
       <section class="extras" aria-labelledby="extras-title">
@@ -132,6 +128,7 @@
           ✕
         </button>
       </div>
+
       <div class="cart-drawer__body">
         <p class="cart-drawer__empty">Tu carrito está vacío</p>
         <ul id="cart-items" class="cart-items"></ul>
